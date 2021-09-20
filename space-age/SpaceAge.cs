@@ -12,17 +12,19 @@ public class SpaceAge
 
     public double OnEarth() => absoluteSecondsOfLife / earthYearInSeconds;
 
-    public double OnMercury() => OnEarth() / 0.2408467;
+    public double OnMercury() => CalculateAge(0.2408467);
 
-    public double OnVenus() => OnEarth() / 0.61519726;
+    public double OnVenus() => CalculateAge(0.61519726);
 
-    public double OnMars() => OnEarth() / 1.8808158;
+    public double OnMars() => CalculateAge(1.8808158);
 
-    public double OnJupiter() => OnEarth() / 11.862615;
+    public double OnJupiter() => CalculateAge(11.862615);
 
-    public double OnSaturn() => OnEarth() / 29.447498;
+    public double OnSaturn() => CalculateAge(29.447498);
 
-    public double OnUranus() => OnEarth() / 84.016846;
+    public double OnUranus() => CalculateAge(84.016846);
 
-    public double OnNeptune() => OnEarth() / 164.79132;
+    public double OnNeptune() => CalculateAge(164.79132);
+
+    public double CalculateAge(double orbitPeriod) => OnEarth() / orbitPeriod;
 }
