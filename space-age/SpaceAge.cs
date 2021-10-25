@@ -26,5 +26,5 @@ public class SpaceAge
 
     public double OnNeptune() => CalculateAge(164.79132);
 
-    public double CalculateAge(double orbitPeriod) => OnEarth() / orbitPeriod;
+    private double CalculateAge(double orbitPeriod) => OnEarth() / orbitPeriod;
 }
